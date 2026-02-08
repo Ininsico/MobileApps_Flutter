@@ -18,6 +18,7 @@ class MongoDatabase {
   }
 
   static Future<Map<String, dynamic>?> login(String email, String password) async {
+    try {
       if (userCollection == null) {
         log('Database not connected');
         return null;
